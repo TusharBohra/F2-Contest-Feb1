@@ -5,23 +5,47 @@ let arr = [
   { id: 2, name: "jack", age: "20", marks: 85 },
   { id: 3, name: "karen", age: "19", marks: 35 },
 ];
-
+PrintStudentswithMap()
+PrintStudentsbyForEach()
+addData()
+removeFailedStudent()
+concatenateArray()
 function PrintStudentswithMap() {
-  //Write your code here , just console.log
+  arr.map((item)=>{ 
+    if(item.marks > 50){
+        console.log(item.name)
+    }
+})
 }
 
 function PrintStudentsbyForEach() {
-  //Write your code here , just console.log
+   arr.forEach(function printDev(e) {
+        if(e.marks > 50){
+            console.log(e.name)
+  }
+})
 }
 
 function addData() {
-  //Write your code here, just console.log
+  arr.push({id:4,name:"susan",age:"20",marks:"45"})
+  console.log(arr)
 }
 
 function removeFailedStudent() {
-  //Write your code here, just console.log
+  arr.forEach(function printDev(e) {
+        if(e.marks < 50){
+            arr.pop()
+  }
+})
+console.log(arr)
 }
 
 function concatenateArray() {
-  //Write your code here, just console.log
+  let arr1 = [
+  { id: 5, name: "Jet", age: "19", marks:"55" },
+  { id: 6, name: "Jay", age: "24", marks:"69" },
+  { id: 7, name: "Pope", age: "17", marks:"39" },
+];
+const result = arr.concat(arr1)
+console.log(result)
 }
